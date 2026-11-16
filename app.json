@@ -1,16 +1,19 @@
 {
   "expo": {
-    "name": "6th-project-sai-client-2026",
-    "slug": "6th-project-sai-client-2026",
+    "name": "사이",
+    "slug": "sai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "6thprojectsaiclient2026",
-    "userInterfaceStyle": "automatic",
+    "scheme": "sai",
+    "userInterfaceStyle": "light",
     "ios": {
+      "bundleIdentifier": "com.aloc.sai",
+      "supportsTablet": false,
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.aloc.sai",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",

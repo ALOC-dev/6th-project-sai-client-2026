@@ -1,56 +1,48 @@
-# Welcome to your Expo app 👋
+# 사이(SAI) 클라이언트
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+알록 6기 프로젝트 '사이'의 모바일 앱입니다. 공강 시간이 겹치는 친구를 찾고 활동을 추천합니다.
 
-## Get started
+## 기술 스택
 
-1. Install dependencies
+- React Native (Expo SDK 58), TypeScript
+- Expo Router
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 시작하기
 
 ```bash
-npm run reset-project
+nvm use               # .nvmrc의 Node 버전 사용
+npm install
+cp .env.example .env  # 환경 변수 파일 만들기
+npm start             # 개발 서버 실행 (Expo Go 또는 시뮬레이터에서 열기)
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+### 환경 변수
 
-### Other setup steps
+| 이름                  | 설명                                          |
+| --------------------- | --------------------------------------------- |
+| `EXPO_PUBLIC_API_URL` | 백엔드 API 주소 (예: `http://localhost:8080`) |
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- `EXPO_PUBLIC_`으로 시작하는 값은 앱 번들에 그대로 포함됩니다. 키·토큰 같은 비밀값은 넣지 않습니다.
+- `.env`는 저장소에 올리지 않습니다. 새 변수를 추가하면 `.env.example`에도 이름을 추가합니다.
+- 로컬 서버에 붙을 때 실제 기기에서는 `localhost` 대신 PC의 내부 IP를, Android 에뮬레이터에서는 `http://10.0.2.2:8080`을 씁니다.
 
-## Learn more
+## 스크립트
 
-To learn more about developing your project with Expo, look at the following resources:
+| 명령                   | 설명                      |
+| ---------------------- | ------------------------- |
+| `npm start`            | 개발 서버 실행            |
+| `npm run ios`          | iOS 시뮬레이터로 실행     |
+| `npm run android`      | Android 에뮬레이터로 실행 |
+| `npm run web`          | 웹으로 실행               |
+| `npm run lint`         | ESLint 검사               |
+| `npm run typecheck`    | TypeScript 타입 검사      |
+| `npm run format`       | Prettier로 전체 포맷      |
+| `npm run format:check` | 포맷 검사만 실행          |
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+PR을 올리기 전에 `lint`, `typecheck`, `format:check`가 모두 통과하는지 확인합니다.
 
-## Join the community
+## 문서
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- 서버 저장소: [6th-project-sai-server-2026](https://github.com/ALOC-dev/6th-project-sai-server-2026)
+- [노션 API 명세서](https://app.notion.com/p/API-40931c4f7fe780848a56c6dbf93a87c2)
+- 개발 규칙: [AGENTS.md](AGENTS.md)
