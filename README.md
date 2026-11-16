@@ -23,26 +23,21 @@ npm start             # 개발 서버 실행 (Expo Go 또는 시뮬레이터에�
 | `EXPO_PUBLIC_API_URL` | 백엔드 API 주소 (예: `http://localhost:8080`) |
 
 - `EXPO_PUBLIC_`으로 시작하는 값은 앱 번들에 그대로 포함됩니다. 키·토큰 같은 비밀값은 넣지 않습니다.
-- `.env`는 저장소에 올리지 않습니다. 새 변수를 추가하면 `.env.example`에도 이름을 추가합니다.
+- 새 변수를 추가하면 `.env.example`에도 이름을 추가합니다.
 - 로컬 서버에 붙을 때 실제 기기에서는 `localhost` 대신 PC의 내부 IP를, Android 에뮬레이터에서는 `http://10.0.2.2:8080`을 씁니다.
 
 ## 스크립트
 
-| 명령                   | 설명                      |
-| ---------------------- | ------------------------- |
-| `npm start`            | 개발 서버 실행            |
-| `npm run ios`          | iOS 시뮬레이터로 실행     |
-| `npm run android`      | Android 에뮬레이터로 실행 |
-| `npm run web`          | 웹으로 실행               |
-| `npm run lint`         | ESLint 검사               |
-| `npm run typecheck`    | TypeScript 타입 검사      |
-| `npm run format`       | Prettier로 전체 포맷      |
-| `npm run format:check` | 포맷 검사만 실행          |
+| 명령                   | 설명                 |
+| ---------------------- | -------------------- |
+| `npm run lint`         | ESLint 검사          |
+| `npm run typecheck`    | TypeScript 타입 검사 |
+| `npm run format`       | Prettier로 전체 포맷 |
+| `npm run format:check` | 포맷 검사만 실행     |
 
-PR을 올리기 전에 `lint`, `typecheck`, `format:check`가 모두 통과하는지 확인합니다.
+PR마다 CI가 `lint`, `typecheck`, `format:check`를 검사합니다.
 
 ## 문서
 
 - 서버 저장소: [6th-project-sai-server-2026](https://github.com/ALOC-dev/6th-project-sai-server-2026)
 - [노션 API 명세서](https://app.notion.com/p/API-40931c4f7fe780848a56c6dbf93a87c2)
-- 개발 규칙: [AGENTS.md](AGENTS.md)
