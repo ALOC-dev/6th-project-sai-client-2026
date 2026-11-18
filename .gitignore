@@ -41,3 +41,6 @@ example
 
 .env*
 !.env.example
+
+# Claude Code 개인 설정 (작업자 지정 등)
+CLAUDE.local.md

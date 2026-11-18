@@ -2,6 +2,9 @@
   "enabledPlugins": {
     "expo@claude-plugins-official": true
   },
+  "permissions": {
+    "deny": ["Edit(/ios/**)", "Edit(/android/**)", "Bash(yarn *)", "Bash(pnpm *)", "Bash(bun *)"]
+  },
   "attribution": {
     "commit": "",
     "pr": "",
